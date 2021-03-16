@@ -9,3 +9,6 @@ Basic principles of the BLAGO network:
 3. All BLAGO network users can participate equally in its development;
 4. Access to the network is opened at the invitation of several of its users;
 5. ...
+
+The project is at the stage of forming the terms of reference. Each of you can join its development at any time.
+@MaloyR
