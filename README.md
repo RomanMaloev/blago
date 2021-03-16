@@ -6,5 +6,6 @@ The network is being developed with the aim of creating conditions for the decen
 Basic principles of the BLAGO network: 
 1. Each user is an authentic person;  
 2. All resources of the network are equally owned by each of its participants;  
-3. All BLAGO network users can participate equally in its development.
-
+3. All BLAGO network users can participate equally in its development;
+4. Access to the network is opened at the invitation of several of its users;
+5. ...
