@@ -11,4 +11,4 @@ Basic principles of the BLAGO network:
 5. ...
 
 The project is at the stage of forming the terms of reference. Each of you can join its development at any time.
-@KOHBEPTATOP
+@RomanMaloev
