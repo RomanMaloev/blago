@@ -1,0 +1,12 @@
+{
+  "name": "blago-agent",
+  "version": "1.0.0",
+  "description": "Minimal Node.js and GitHub Pages project for coordinating human needs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -e \"const { analyzeNeed } = require('./index'); console.log(analyzeNeed('Need help coordinating food delivery for a local group.'));\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

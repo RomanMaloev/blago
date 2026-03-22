@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blago-agent</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>blago-agent</h1>
+      <p class="intro">A minimal open system for turning a human need into a simple agent-ready structure.</p>
+
+      <label for="need-input" class="label">Need</label>
+      <input id="need-input" type="text" placeholder="Need help coordinating food delivery for a local group." />
+      <button id="analyze-button" type="button">Analyze need</button>
+
+      <section class="result" aria-live="polite">
+        <h2>Agent output</h2>
+        <pre id="result-output">Waiting for a need...</pre>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
