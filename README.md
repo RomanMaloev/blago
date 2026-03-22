@@ -1,14 +1,46 @@
-# blago
-BLAGO is a decentralized network implemented on the blockchain.
+# blago-agent
 
-The network is being developed with the aim of creating conditions for the decentralization of world governance, for the release of any of its participants from the politics of their state, for an even distribution of all resources.  In a general sense, we create an infrastructure for the favorable existence of any person in unity with nature and care for the world around us.
+`blago-agent` is a small GitHub Pages demo for BLAGO's core idea: coordinate human needs with simple agent logic.
 
-Basic principles of the BLAGO network: 
-1. Each user is an authentic person;  
-2. All resources of the network are equally owned by each of its participants;  
-3. All BLAGO network users can participate equally in its development;
-4. Access to the network is opened at the invitation of several of its users;
-5. ...
+## Project goal
 
-The project is at the stage of forming the terms of reference. Each of you can join its development at any time.
-@RomanMaloev
+Build an open system for coordinating human needs.
+
+The current version stays intentionally small:
+
+- one input for a need
+- one action button
+- one analysis function
+- one structured output for the next agent step
+
+## Main concepts
+
+- **need** — the human request or problem to describe
+- **agent** — the role that receives and processes the need
+- **solution** — the next practical action to propose
+- **coordination** — how the need moves to the next responsible actor
+
+## Modular structure
+
+- `index.html` — the page shell
+- `style.css` — minimal presentation
+- `app.js` — UI events and rendering
+- `index.js` — small analysis module shared by browser and Node.js
+- `package.json` — metadata and a basic check
+
+## How it works
+
+1. A person enters a need.
+2. `analyzeNeed(text)` normalizes the text.
+3. The function returns a simple object with `need`, `agent`, `solution`, and `coordination`.
+4. The page prints that object as JSON.
+
+## Local use
+
+Open `index.html` in a browser, or publish the repository with GitHub Pages.
+
+Run the Node.js check:
+
+```bash
+npm test
+```
