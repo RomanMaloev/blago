@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLAGO Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>Welcome to BLAGO</h1>
+    <p>Your personal assistant is ready to chat.</p>
+
+    <label for="token">Hugging Face API token</label>
+    <input id="token" type="password" placeholder="hf_...">
+
+    <textarea id="input" placeholder="Type anything..." rows="3"></textarea>
+    <button onclick="send()">Send</button>
+
+    <div id="chat"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

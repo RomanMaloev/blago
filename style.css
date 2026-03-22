@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  padding: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.5rem 1rem;
+}
+
+#chat {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 0.5rem;
+}
+
+.message.user {
+  color: blue;
+}
+
+.message.agent {
+  color: green;
+}
