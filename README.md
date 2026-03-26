@@ -1,46 +1,63 @@
 # blago-agent
 
-`blago-agent` is a small GitHub Pages demo for BLAGO's core idea: coordinate human needs with simple agent logic.
+`blago-agent` is a lightweight web resource for BLAGO: users can chat with an AI agent, optionally attach context from a public URL, and receive structured responses.
 
-## Project goal
+## What is implemented
 
-Build an open system for coordinating human needs.
+- Browser UI with a chat log and technical response panel.
+- Server API endpoint `POST /api/agent`.
+- Optional network context fetch from `networkUrl`.
+- OpenAI mode (if `OPENAI_API_KEY` is set) and local fallback mode.
 
-The current version stays intentionally small:
+## Project structure
 
-- one input for a need
-- one action button
-- one analysis function
-- one structured output for the next agent step
+- `index.html` — web page shell (chat + inputs)
+- `style.css` — UI styles
+- `app.js` — browser-side chat logic
+- `index.js` — local analysis fallback utility
+- `server.js` — API server and AI-agent orchestration
+- `package.json` — scripts and dependencies
 
-## Main concepts
-
-- **need** — the human request or problem to describe
-- **agent** — the role that receives and processes the need
-- **solution** — the next practical action to propose
-- **coordination** — how the need moves to the next responsible actor
-
-## Modular structure
-
-- `index.html` — the page shell
-- `style.css` — minimal presentation
-- `app.js` — UI events and rendering
-- `index.js` — small analysis module shared by browser and Node.js
-- `package.json` — metadata and a basic check
-
-## How it works
-
-1. A person enters a need.
-2. `analyzeNeed(text)` normalizes the text.
-3. The function returns a simple object with `need`, `agent`, `solution`, and `coordination`.
-4. The page prints that object as JSON.
-
-## Local use
-
-Open `index.html` in a browser, or publish the repository with GitHub Pages.
-
-Run the Node.js check:
+## Quick start
 
 ```bash
-npm test
+npm install
+npm start
 ```
+
+Open: `http://localhost:3000`
+
+## API
+
+### `POST /api/agent`
+
+Request body:
+
+```json
+{
+  "messages": [
+    { "role": "user", "content": "Собери краткий план действий" }
+  ],
+  "networkUrl": "https://example.com"
+}
+```
+
+Response body:
+
+```json
+{
+  "reply": "...",
+  "mode": "openai | fallback",
+  "model": "...",
+  "usedNetwork": true,
+  "networkSnippet": "..."
+}
+```
+
+## Environment variables
+
+- `PORT` — server port (default `3000`)
+- `OPENAI_API_KEY` — enables real AI replies via OpenAI API
+- `OPENAI_MODEL` — model name (default `gpt-4.1-mini`)
+
+If `OPENAI_API_KEY` is not set, the server returns a deterministic local fallback response.

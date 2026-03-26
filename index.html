@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blago-agent</title>
+    <title>blago-agent web</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="app">
       <h1>blago-agent</h1>
-      <p class="intro">A minimal open system for turning a human need into a simple agent-ready structure.</p>
+      <p class="intro">Веб-интерфейс для взаимодействия с ИИ-агентом и сетью.</p>
 
-      <label for="need-input" class="label">Need</label>
-      <input id="need-input" type="text" placeholder="Need help coordinating food delivery for a local group." />
-      <button id="analyze-button" type="button">Analyze need</button>
+      <section class="panel">
+        <label for="network-url" class="label">URL для контекста из сети (опционально)</label>
+        <input id="network-url" type="url" placeholder="https://example.com" />
+
+        <label for="need-input" class="label">Сообщение агенту</label>
+        <textarea id="need-input" rows="4" placeholder="Например: собери краткий план помощи волонтёрской группе"></textarea>
+
+        <button id="analyze-button" type="button">Отправить агенту</button>
+      </section>
 
       <section class="result" aria-live="polite">
-        <h2>Agent output</h2>
-        <pre id="result-output">Waiting for a need...</pre>
+        <h2>Диалог</h2>
+        <div id="chat-log" class="chat-log"></div>
+      </section>
+
+      <section class="result" aria-live="polite">
+        <h2>Технический ответ</h2>
+        <pre id="result-output">Ожидание запроса…</pre>
       </section>
     </main>
 

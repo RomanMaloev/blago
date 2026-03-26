@@ -1,12 +1,16 @@
 {
   "name": "blago-agent",
-  "version": "1.0.0",
-  "description": "Minimal Node.js and GitHub Pages project for coordinating human needs.",
+  "version": "1.1.0",
+  "description": "Web resource for BLAGO with network-aware AI agent API and browser UI.",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "test": "node -e \"const { analyzeNeed } = require('./index'); console.log(analyzeNeed('Need help coordinating food delivery for a local group.'));\""
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
